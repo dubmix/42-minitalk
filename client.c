@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pdelanno <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pdelanno <pdelanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 10:14:55 by pdelanno          #+#    #+#             */
-/*   Updated: 2023/06/05 17:06:21 by pdelanno         ###   ########.fr       */
+/*   Updated: 2023/11/27 09:07:00 by pdelanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	char_to_bin(char c, int pid)
 void	sig_handler(int sig)
 {
 	if (sig == SIGUSR1)
-		ft_printf("Message has been received by server!\n");
+		printf("Message has been received by server!\n");
 }
 
 int	main(int argc, char *argv[])
@@ -77,6 +77,6 @@ int	main(int argc, char *argv[])
 		char_to_bin('\0', pid);
 	}
 	else
-		ft_printf("Error\n");
+		printf("Error\n");
 	return (0);
 }

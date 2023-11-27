@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pdelanno <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pdelanno <pdelanno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 10:15:08 by pdelanno          #+#    #+#             */
-/*   Updated: 2023/06/05 17:10:28 by pdelanno         ###   ########.fr       */
+/*   Updated: 2023/11/27 09:07:21 by pdelanno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ int	main(int argc, char *argv[])
 	(void)argv;
 	if (argc != 1)
 	{
-		ft_printf("Error\n");
+		printf("Error\n");
 		return (1);
 	}
 	pid = getpid();
-	ft_printf("%d\n", pid);
+	printf("%d\n", pid);
 	sa.sa_sigaction = bin_to_char;
 	sigemptyset(&sa.sa_mask);
 	sa.sa_flags = SA_SIGINFO;
